@@ -17,8 +17,8 @@ const ResultsPanel = (props) => {
     return (
         <div className={`results-panel ${props.className}`}>
             <h2 className="text-center">Results Panel</h2>
-            {JSON.stringify(meetingContext)}
-            <TestComponent value={meetingContext.numEmployees} />
+            {JSON.stringify(Object.values(meetingContext), null, 2)}
+            {/* <TestComponent value={meetingContext.numEmployees} /> */}
         </div>
     );
 };

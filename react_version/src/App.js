@@ -6,7 +6,7 @@ import ContextProvider from './meetingContext';
 const App = () => {
   return (
     <div className="App">
-      <h1>How much do your meetings really cost?</h1>
+      <h1 className="text-center">How much do your meetings really cost?</h1>
       <div className="flex flex-wrap">
         <ContextProvider>
           <ConfigurationPanel />
