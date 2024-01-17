@@ -1,0 +1,68 @@
+body {
+  --justin-joyce-purple: #7851a9;
+  --justin-joyce-black: #282c35;
+  --justin-joyce-white: #e2e2e2;
+
+  background-color: var(--justin-joyce-black);
+  color: var(--justin-joyce-white);
+
+  display: block;
+  box-sizing: border-box;
+}
+
+.color-black {
+  color: var(--justin-joyce-black);
+}
+
+.App {
+  /* text-align: center; */
+}
+
+.text-center {
+  text-align: center;
+}
+
+.plus-minus-input {
+  margin-bottom: 15px;
+}
+
+.plus-minus-input label {
+  display: block;
+  margin: 10px 0 2px;
+}
+
+.plus-minus-input input {
+  text-align: center;
+  padding: 10px;
+  font-size: 16px;
+}
+
+/* Remove the default up and down arrows from the number input */
+.plus-minus-input input::-webkit-outer-spin-button,
+.plus-minus-input input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.flex-wrap {
+  flex-flow: row wrap;
+}
+
+.configuration-panel {
+  width: 33%;
+  border: 1px solid var(--justin-joyce-white);
+  /* background-color: var(--justin-joyce-white); */
+  /* color: var(--justin-joyce-black); */
+}
+
+.results-panel {
+  width: 60%;
+  border: 1px solid var(--justin-joyce-white);
+  /* background-color: var(--justin-joyce-white); */
+  /* color: var(--justin-joyce-black); */
+}
