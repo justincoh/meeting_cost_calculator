@@ -16,6 +16,7 @@ const ConfigurationPanel = (props) => {
                         setter={data.setter}
                         step={data.step}
                         value={data.value}
+                        key={data.label}
                     />
                 ))}
             </div>

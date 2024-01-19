@@ -1,24 +1,60 @@
 import React from "react";
 import { useContext, useEffect } from "react";
 import { MeetingContext } from "./meetingContext";
-import TestComponent from "./testComponent";
+import ResultsCard from "./ResultsCard";
+import { formatDollars } from "./utils";
 
 // Cost per meeting
 // per week
 // per year
 // $ per person?
+
+// assumes 40 hrs per week * 52 weeks per year
+const HOURS_PER_YEAR = 2080;
+
+// salary / hours = hourly rate
+
+// salary / 2080 = hourly rate
+// * number of employees
 const ResultsPanel = (props) => {
     const meetingContext = useContext(MeetingContext);
+    const {
+        numEmployees,
+        meetingDuration,
+        timesPerWeek,
+        averageSalary,
+    } = meetingContext;
 
-    useEffect(() => {
-        console.log("results panel useeffect: ");
-    }, [meetingContext.numEmployees])
+    const costPerHour = () => {
+        const hourlyRate = averageSalary.value / HOURS_PER_YEAR;
+        const totalHourly = hourlyRate * numEmployees.value;
+        return totalHourly;
+    }
+
+    const costPerMinute = (costPerHour() / 60);
+    const costPerMeeting = (costPerMinute * meetingDuration.value).toFixed(2);
+    const costPerWeek = (costPerMeeting * timesPerWeek.value).toFixed(2);
+    const costPerYear = (costPerWeek * 52).toFixed(2)
 
     return (
         <div className={`results-panel ${props.className}`}>
             <h2 className="text-center">Results Panel</h2>
-            {JSON.stringify(Object.values(meetingContext), null, 2)}
-            {/* <TestComponent value={meetingContext.numEmployees} /> */}
+            <div className="flex">
+                <ResultsCard
+                    label={
+                        `Each meeting costs your company ${formatDollars(costPerMeeting)}`
+                    }
+                    dollarCost={costPerMeeting}
+                />
+                <ResultsCard
+                    label={`or ${formatDollars(costPerMinute)} per minute`}
+                    dollarCost={costPerMinute}
+                />
+                <ResultsCard
+                    label={`or ${formatDollars(costPerYear)} per year`}
+                    dollarCost={costPerYear}
+                />
+            </div>
         </div>
     );
 };

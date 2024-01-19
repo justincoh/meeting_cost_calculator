@@ -29,7 +29,7 @@ const ContextProvider = ({ children }) => {
                 label: "Times per week",
                 value: timesPerWeek,
                 setter: setTimesPerWeek,
-                step: 1,
+                step: .5,
             },
             averageSalary: {
                 name: "averageSalary",

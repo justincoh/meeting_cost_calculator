@@ -46,6 +46,7 @@ body {
 
 .flex {
   display: flex;
+  flex-flow: row wrap;
   justify-content: space-evenly;
 }
 
@@ -55,14 +56,20 @@ body {
 
 .configuration-panel {
   width: 33%;
-  border: 1px solid var(--justin-joyce-white);
+  /* border: 1px solid var(--justin-joyce-white); */
   /* background-color: var(--justin-joyce-white); */
   /* color: var(--justin-joyce-black); */
 }
 
+.results-card {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
 .results-panel {
   width: 60%;
-  border: 1px solid var(--justin-joyce-white);
+  /* border: 1px solid var(--justin-joyce-white); */
   /* background-color: var(--justin-joyce-white); */
   /* color: var(--justin-joyce-black); */
 }
