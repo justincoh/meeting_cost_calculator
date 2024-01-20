@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.aca9f779.css",
-    "main.js": "/static/js/main.993346cf.js",
-    "static/js/787.b707ff97.chunk.js": "/static/js/787.b707ff97.chunk.js",
-    "index.html": "/index.html",
-    "main.aca9f779.css.map": "/static/css/main.aca9f779.css.map",
-    "main.993346cf.js.map": "/static/js/main.993346cf.js.map",
-    "787.b707ff97.chunk.js.map": "/static/js/787.b707ff97.chunk.js.map"
+    "main.css": "/meeting_cost_calculator/static/css/main.aca9f779.css",
+    "main.js": "/meeting_cost_calculator/static/js/main.f362a7c3.js",
+    "static/js/787.b707ff97.chunk.js": "/meeting_cost_calculator/static/js/787.b707ff97.chunk.js",
+    "index.html": "/meeting_cost_calculator/index.html",
+    "main.aca9f779.css.map": "/meeting_cost_calculator/static/css/main.aca9f779.css.map",
+    "main.f362a7c3.js.map": "/meeting_cost_calculator/static/js/main.f362a7c3.js.map",
+    "787.b707ff97.chunk.js.map": "/meeting_cost_calculator/static/js/787.b707ff97.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.aca9f779.css",
-    "static/js/main.993346cf.js"
+    "static/js/main.f362a7c3.js"
   ]
 }
