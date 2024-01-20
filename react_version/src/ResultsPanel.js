@@ -1,21 +1,11 @@
 import React from "react";
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import { MeetingContext } from "./meetingContext";
 import ResultsCard from "./ResultsCard";
-import { formatDollars } from "./utils";
-
-// Cost per meeting
-// per week
-// per year
-// $ per person?
 
 // assumes 40 hrs per week * 52 weeks per year
 const HOURS_PER_YEAR = 2080;
 
-// salary / hours = hourly rate
-
-// salary / 2080 = hourly rate
-// * number of employees
 const ResultsPanel = (props) => {
     const meetingContext = useContext(MeetingContext);
     const {
