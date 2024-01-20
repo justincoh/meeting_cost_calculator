@@ -38,22 +38,26 @@ const ResultsPanel = (props) => {
 
     return (
         <div className={`results-panel ${props.className}`}>
-            <h2 className="text-center">Results Panel</h2>
-            <div className="flex">
-                <ResultsCard
-                    label={
-                        `Each meeting costs your company ${formatDollars(costPerMeeting)}`
-                    }
-                    dollarCost={costPerMeeting}
-                />
-                <ResultsCard
-                    label={`or ${formatDollars(costPerMinute)} per minute`}
-                    dollarCost={costPerMinute}
-                />
-                <ResultsCard
-                    label={`or ${formatDollars(costPerYear)} per year`}
-                    dollarCost={costPerYear}
-                />
+            {/* <h2 className="text-center">Results Panel</h2> */}
+            <div className="flex text center">
+                <div className="results-card-container">
+                    <ResultsCard
+                        label="per meeting"
+                        dollarCost={costPerMeeting}
+                    />
+                </div>
+                <div className="results-card-container">
+                    <ResultsCard
+                        label="per minute"
+                        dollarCost={costPerMinute}
+                    />
+                </div>
+                <div className="results-card-container">
+                    <ResultsCard
+                        label="per year"
+                        dollarCost={costPerYear}
+                    />
+                </div>
             </div>
         </div>
     );

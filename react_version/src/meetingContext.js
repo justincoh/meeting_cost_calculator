@@ -12,7 +12,7 @@ const ContextProvider = ({ children }) => {
         <MeetingContext.Provider value={{
             numEmployees: {
                 name: "numEmployees",
-                label: "Number of employees",
+                label: "Number of attendees",
                 value: numEmployees,
                 setter: setNumEmployees,
                 step: 1,
@@ -33,7 +33,7 @@ const ContextProvider = ({ children }) => {
             },
             averageSalary: {
                 name: "averageSalary",
-                label: "Average salary",
+                label: "Average attendee salary",
                 value: averageSalary,
                 setter: setAverageSalary,
                 step: 25000,

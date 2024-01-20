@@ -7,7 +7,7 @@ const ConfigurationPanel = (props) => {
 
     return (
         <div className={`border-solid configuration-panel ${props.className}`}>
-            <h2 className="text-center">ConfigurationPanel</h2>
+            {/* <h2 className="text-center">ConfigurationPanel</h2> */}
             <div className="plus-minus-container text-center">
                 {Object.values(dataPoints).map(data => (
                     <PlusMinusInput

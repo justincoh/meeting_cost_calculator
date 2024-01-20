@@ -9,8 +9,8 @@ const App = () => {
       <h1 className="text-center">How much do your meetings really cost?</h1>
       <div className="flex flex-wrap">
         <ContextProvider>
-          <ConfigurationPanel />
           <ResultsPanel />
+          <ConfigurationPanel />
         </ContextProvider>
       </div>
     </div>

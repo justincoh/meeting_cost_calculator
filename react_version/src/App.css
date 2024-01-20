@@ -2,20 +2,10 @@ body {
   --justin-joyce-purple: #7851a9;
   --justin-joyce-black: #282c35;
   --justin-joyce-white: #e2e2e2;
-
   background-color: var(--justin-joyce-black);
   color: var(--justin-joyce-white);
-
   display: block;
   box-sizing: border-box;
-}
-
-.color-black {
-  color: var(--justin-joyce-black);
-}
-
-.App {
-  /* text-align: center; */
 }
 
 .text-center {
@@ -24,18 +14,42 @@ body {
 
 .plus-minus-input {
   margin-bottom: 15px;
+  display: flex;
 }
 
-.plus-minus-input label {
+.plus-minus-label {
   display: block;
-  margin: 10px 0 2px;
+  margin: 10px 5px 2px;
+  text-align: left;
+  width: 30%;
 }
 
 .plus-minus-input input {
-  text-align: center;
+  color: var(--justin-joyce-purple);
+  font-size: 1.5em;
+  margin: 0;
   padding: 10px;
-  font-size: 16px;
+  text-align: center;
+  width: 75%;
+  border: none;
+  border-radius: 0;
 }
+
+.plus-minus-input button {
+  font-size: 2em;
+  background: white;
+  border: none;
+  border-radius: 0;
+  color: var(--justin-joyce-purple);
+  cursor: pointer;
+  padding: 0 25px;
+}
+
+.input-wrapper {
+  display: flex;
+  width: 65%;
+}
+
 
 /* Remove the default up and down arrows from the number input */
 .plus-minus-input input::-webkit-outer-spin-button,
@@ -54,22 +68,78 @@ body {
   flex-flow: row wrap;
 }
 
+.width-100 {
+  width: 100%;
+}
+
+.mt0 {
+  margin-top: 0;
+}
+
+.mb0 {
+  margin-bottom: 0;
+}
+
 .configuration-panel {
-  width: 33%;
-  /* border: 1px solid var(--justin-joyce-white); */
-  /* background-color: var(--justin-joyce-white); */
-  /* color: var(--justin-joyce-black); */
+  width: 45%;
+}
+
+.results-card-container {
+  width: 51%;
 }
 
 .results-card {
-  width: 100%;
   justify-content: center;
-  align-items: center;
 }
 
 .results-panel {
-  width: 60%;
-  /* border: 1px solid var(--justin-joyce-white); */
-  /* background-color: var(--justin-joyce-white); */
-  /* color: var(--justin-joyce-black); */
+  width: 50%;
+}
+
+.dollar-amount {
+  font-size: 3em;
+  margin-top: 15px;
+}
+
+@media (min-width: 1024px) {
+  .App {
+    margin: 0 10%;
+  }
+
+  .configuration-panel {
+    /* to line up with results */
+    margin-top: 1.5em;
+  }
+}
+@media (max-width: 1024px) {
+  .results-panel {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .configuration-panel {
+    width: 100%;
+  }
+
+  .plus-minus-input {
+    justify-content: space-between;
+    text-align: center;
+    flex-flow: row wrap;
+  }
+
+  .plus-minus-label {
+    width: 100%;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 1.5em;
+  }
+
+  .input-wrapper {
+    width: 90%;
+    margin: auto;
+  }
+
+  h1 {
+    margin-bottom: 0;
+  }
 }

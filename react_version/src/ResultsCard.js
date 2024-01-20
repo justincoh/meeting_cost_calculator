@@ -3,9 +3,11 @@ import { formatDollars } from "./utils";
 
 const ResultsCard = ({ label, dollarCost }) => {
     return (
-        <div className="results-card flex">
-            <p>{label}</p>
-            <h2>{formatDollars(dollarCost)}</h2>
+        <div className="results-card width-100">
+            <h2 className="dollar-amount width-100 mb0">
+                {formatDollars(dollarCost)}
+            </h2>
+            <p className="width-100 mt0">{label}</p>
         </div>
     );
 };

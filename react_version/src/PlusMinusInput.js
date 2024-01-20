@@ -1,5 +1,7 @@
 import React from "react";
 
+const nonNumberMatcher = new RegExp(/\D/);
+
 const PlusMinusInput = ({
     label,
     name, // now unused, can probably remove
@@ -8,7 +10,7 @@ const PlusMinusInput = ({
     value,
 }) => {
     const onDecrement = () => {
-        const newValue = value - step;
+        const newValue = parseInt(value) - step;
         if (newValue < 0) {
             setter(0);
             return;
@@ -17,7 +19,12 @@ const PlusMinusInput = ({
         setter(newValue);
     }
     const onChange = (e) => {
-        setter(e.target.value);
+        const newValue = e.target.value;
+        if(nonNumberMatcher.test(newValue)) {
+            return;
+        }
+        
+        setter(newValue);
     }
 
     return (
@@ -26,22 +33,25 @@ const PlusMinusInput = ({
                 className="plus-minus-label"
                 htmlFor={label}
             >{label}</label>
-            <button
-                type="button"
-                onClick={onDecrement}
-            >-</button>
-            <input
-                name={label}
-                type="number"
-                min="1"
-                className="color-black"
-                value={value}
-                onChange={onChange}
-            />
-            <button
-                type="button"
-                onClick={() => setter(value + step)}
-            >+</button>
+            <div className="input-wrapper">
+                <button
+                    type="button"
+                    onClick={onDecrement}
+                    className="minus"
+                >-</button>
+                <input
+                    name={label}
+                    type="tel"
+                    pattern="[0-9]*"
+                    min="1"
+                    value={value}
+                    onChange={onChange}
+                />
+                <button
+                    type="button"
+                    onClick={() => setter(parseInt(value) + step)}
+                >+</button>
+            </div>
         </div>
     );
 };
