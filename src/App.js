@@ -7,7 +7,7 @@ import Footer from './Footer';
 const App = () => {
   return (
     <div className="App">
-      <h1 className="text-center">How much do your meetings really cost?</h1>
+      <h1 className="text-center">How much does this meeting really cost?</h1>
       <div className="flex flex-wrap">
         <ContextProvider>
           <ResultsPanel />
