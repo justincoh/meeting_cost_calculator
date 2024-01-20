@@ -2,6 +2,7 @@ import './App.css';
 import ConfigurationPanel from './ConfigurationPanel';
 import ResultsPanel from './ResultsPanel';
 import ContextProvider from './meetingContext';
+import Footer from './Footer';
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
           <ConfigurationPanel />
         </ContextProvider>
       </div>
+      <Footer />
     </div>
   );
 }

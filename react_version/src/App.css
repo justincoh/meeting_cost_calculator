@@ -12,6 +12,10 @@ h1 {
   font-weight: 400;
 }
 
+a {
+  color: var(--justin-joyce-white);
+}
+
 .text-center {
   text-align: center;
 }
