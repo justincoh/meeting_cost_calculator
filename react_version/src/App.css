@@ -112,7 +112,11 @@ a {
 
 @media (min-width: 1024px) {
   .App {
-    margin: 0 10%;
+    margin: 0 20%;
+  }
+
+  .plus-minus-input {
+    margin-top: 15px;
   }
 
   .configuration-panel {
