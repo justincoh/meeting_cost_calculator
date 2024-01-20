@@ -1,5 +1,6 @@
 {
-  "name": "react_version",
+  "name": "meeting_cost_calculator",
+  "homepage": "http://justincoh.github.io/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
