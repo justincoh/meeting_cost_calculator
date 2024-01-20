@@ -3,7 +3,7 @@ import { formatDollars } from "./utils";
 
 const ResultsCard = ({ label, dollarCost }) => {
     return (
-        <div className="results-card width-100">
+        <div className="results-card">
             <h2 className="dollar-amount width-100 mb0">
                 {formatDollars(dollarCost)}
             </h2>

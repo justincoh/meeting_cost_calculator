@@ -38,8 +38,7 @@ const ResultsPanel = (props) => {
 
     return (
         <div className={`results-panel ${props.className}`}>
-            {/* <h2 className="text-center">Results Panel</h2> */}
-            <div className="flex text center">
+            <div className="flex">
                 <div className="results-card-container">
                     <ResultsCard
                         label="per meeting"

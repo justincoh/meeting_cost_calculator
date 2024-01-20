@@ -8,6 +8,10 @@ body {
   box-sizing: border-box;
 }
 
+h1 {
+  font-weight: 400;
+}
+
 .text-center {
   text-align: center;
 }
@@ -90,6 +94,7 @@ body {
 
 .results-card {
   justify-content: center;
+  width: 100%;
 }
 
 .results-panel {
@@ -111,10 +116,28 @@ body {
     margin-top: 1.5em;
   }
 }
+
 @media (max-width: 1024px) {
   .results-panel {
     width: 100%;
     margin-bottom: 10px;
+  }
+
+  .dollar-amount {
+    font-size: 2.5em;
+  }
+
+  .results-panel .flex {
+    justify-content: space-evenly;
+  }
+
+  .results-card-container {
+    width: 40%;
+    text-align: center;
+  }
+
+  .results-card-container:last-of-type {
+    width: 100%;
   }
 
   .configuration-panel {
@@ -128,7 +151,8 @@ body {
   }
 
   .plus-minus-label {
-    width: 100%;
+    width: 90%;
+    margin: auto;
     margin-bottom: 10px;
     text-align: center;
     font-size: 1.5em;
@@ -140,6 +164,6 @@ body {
   }
 
   h1 {
-    margin-bottom: 0;
+    margin-bottom: 5px;
   }
 }
