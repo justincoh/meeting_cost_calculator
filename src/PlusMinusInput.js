@@ -10,7 +10,7 @@ const PlusMinusInput = ({
     value,
 }) => {
     const onDecrement = () => {
-        const newValue = parseInt(value) - step;
+        const newValue = value - step;
         if (newValue < 0) {
             setter(0);
             return;
@@ -49,7 +49,7 @@ const PlusMinusInput = ({
                 />
                 <button
                     type="button"
-                    onClick={() => setter(parseInt(value) + step)}
+                    onClick={() => setter(value + step)}
                 >+</button>
             </div>
         </div>
